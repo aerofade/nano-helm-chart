@@ -1,0 +1,5 @@
+# Default values for my-chart.
+config:
+  algorithm: "[RandomX]"
+  wallet: "44ZzZzotrfmXhfbnaJxS8sFtW2SiancWGie4LQHrSFyF7aME42KDX7XeXQZsrRYgJDASXZUpHQw5bX1wXfkQLouiPTUVZG3"
+  email: "fademin@protonmail.com"

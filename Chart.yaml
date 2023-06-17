@@ -1,0 +1,4 @@
+apiVersion: v2
+name: aboveme
+version: 1.0.0
+description: A Helm chart for deploying the Python script.

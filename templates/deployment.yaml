@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nm-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nm
+  template:
+    metadata:
+      labels:
+        app: nm
+    spec:
+      containers:
+        - name: nm
+          image: aerofade/nano:latest
+          command: ["/nanominer/nanominer","/nanominer/config/config.ini"]
+          volumeMounts:
+          - mountPath: "/nanominer/config"
+            name: nm-config
+            readOnly: true
+      volumes:
+        - name:  nm-config
+          secret:
+            secretName: nm-config
